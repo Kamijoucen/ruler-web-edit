@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<table style="width: 100%">
+    <tr>
+        <td>
+            <div id="div1">
+               <textarea id="ta" style="width: 60%; font-size: 18px" rows="35">
+</textarea>
+            </div>
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="submit()">计算</button>
+        </td>
+        <td>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+
+    function submit() {
+        var ta = $("#ta").val();
+        $.ajax({
+            url: 'runtime/run',
+            type: 'POST',
+            data: ta,
+            contentType: 'application/text',
+            success: function (data) {
+                alert(data);
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
