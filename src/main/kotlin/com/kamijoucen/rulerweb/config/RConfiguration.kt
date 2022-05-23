@@ -15,6 +15,9 @@ class RConfiguration {
         configuration.setGlobalImportModule("/ruler/std/global.txt", "op")
         configuration.setGlobalImportModule("/ruler/std/util.txt", "util")
         configuration.setGlobalImportModule("/ruler/std/sort.txt", "sort")
+
+        configuration.maxLoopNumber = 100000;
+        configuration.maxStackDepth = 2000
         return configuration
     }
 
