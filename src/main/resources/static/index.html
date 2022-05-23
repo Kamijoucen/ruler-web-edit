@@ -9,14 +9,15 @@
 
 <table style="width: 100%">
     <tr>
-        <td>
+        <td style="width: 60%">
             <div id="div1">
-               <textarea id="ta" style="width: 60%; font-size: 18px" rows="35">
+               <textarea id="ta" style="font-size: 18px; width: 80%" rows="35">
 </textarea>
             </div>
         </td>
-        <td>
-
+        <td style="width: 35%">
+            结果：<span id="result"></span><br/>
+            耗时：<span id="time"></span>
         </td>
     </tr>
     <tr>
@@ -38,7 +39,8 @@
             data: ta,
             contentType: 'application/text',
             success: function (data) {
-                alert(data);
+                $("#result").text(JSON.stringify(data.v2.result));
+                $("#time").text(data.v1);
             }
         });
     }
