@@ -1,3 +1,6 @@
 server:
   servlet:
     context-path: /ruleredit
+ruler:
+  maxStackDepth: 500
+  maxLoopNumber: 1000000
